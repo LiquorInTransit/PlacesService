@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.gazorpazorp.model.Location;
 import com.gazorpazorp.model.Place;
+import com.gazorpazorp.model.PlaceList;
 import com.gazorpazorp.service.PlacesService;
 
 @RestController
@@ -34,9 +35,9 @@ public class PlaceController {
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<Place>> getAll() throws Exception{
+	public ResponseEntity<PlaceList> getAll() throws Exception{
 		return Optional.ofNullable(placeService.getAllPlaces())
-				.map(p -> new ResponseEntity<>(p, HttpStatus.OK))
+				.map(p -> new ResponseEntity<>(new PlaceList(p), HttpStatus.OK))
 				.orElseThrow(() -> new Exception("Customer has not saved any places"));
 	}
 	
