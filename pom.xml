@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.gazorpazorp</groupId>
-	<artifactId>SAMPLE_APPLICATION</artifactId>
+	<artifactId>PlacesService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>SAMPLE_APPLICATION</name>
-	<description>Demo project for Spring Boot</description>
+	<name>PlacesService</name>
+	<description>Service for managing saved Customer Places</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
